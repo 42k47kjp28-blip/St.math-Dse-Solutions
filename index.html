@@ -26,27 +26,54 @@
     }
   </style>
 </head>
-<body class="bg-slate-50">
-  <!-- Nav -->
+<body class="bg-white">   <!-- ← 改做白色背景 -->
+
+  <!-- Nav 保持原本或微調 -->
   <nav class="bg-white border-b sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-x-3">
-        <div class="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center">
-          <span class="text-white font-bold text-xl">S</span>
-        </div>
-        <div>
-          <div class="font-bold text-xl tracking-tight">Samuel DSE Math</div>
-          <div class="text-[10px] text-slate-500 -mt-1">香港 DSE 數學資源</div>
-        </div>
-      </div>
-      
-      <div class="flex items-center gap-x-8 text-sm">
-        <a href="index.html" class="font-medium text-slate-700 hover:text-indigo-600">首頁</a>
-        <a href="#" class="font-medium text-slate-700 hover:text-indigo-600">M1 解答</a>
-        <a href="#" class="font-medium text-slate-700 hover:text-indigo-600">M2 解答</a>
-        <a href="#" class="font-medium text-slate-700 hover:text-indigo-600">關於我</a>
+    ...
+  </nav>
+
+  <!-- Hero 區保持白底 -->
+
+  <!-- 卡片區重點修改 -->
+  <div class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900">所有解答</h2>
+        <p class="text-slate-600 mt-1">持續更新中 • 歡迎分享</p>
       </div>
     </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="solutionsGrid">
+
+      <!-- 黑色卡片 + 淺金色字體 -->
+      <a href="solution-template.html" 
+         class="solution-card group block bg-zinc-950 hover:bg-black border border-zinc-800 rounded-3xl p-6 transition-all">
+
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-x-2">
+            <span class="math-badge bg-amber-300 text-zinc-950 font-semibold px-3 py-0.5 rounded-full text-xs">M1</span>
+            <span class="text-sm text-amber-200">2026</span>
+          </div>
+          <span class="text-xs px-3 py-1 bg-zinc-800 text-amber-200 rounded-full">Q1</span>
+        </div>
+
+        <h3 class="font-semibold text-lg leading-snug text-amber-200 group-hover:text-amber-300 transition-colors">
+          微分應用與曲線性質
+        </h3>
+        <p class="text-sm text-amber-100/70 mt-2 line-clamp-2">
+          求函數的駐點、拐點，並判斷曲線的凹凸性。
+        </p>
+
+        <div class="mt-5 flex items-center gap-x-2">
+          <span class="text-xs px-3 py-1 bg-zinc-800 text-amber-200 rounded-full">微積分</span>
+        </div>
+      </a>
+
+      <!-- 你之後加新題目時，複製上面呢個卡片結構就得 -->
+
+    </div>
+  </div>
   </nav>
 
   <!-- Hero -->
